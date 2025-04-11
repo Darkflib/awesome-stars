@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
   schedule:
   - cron: 30 0 * * *
-permissions:
-  contents: read
-  metadata: read
-  
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   awesome-stars:
     name: update awesome-stars
